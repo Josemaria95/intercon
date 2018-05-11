@@ -75,10 +75,7 @@ For a navigation approach in a wheeled differential robot, it is necessary to co
 %  \label{fig:Polar}
 %\end{figure}
 
-An alternative way of getting a soft control about position and orientation for a differential robot is throughout a control linear law for feedback  of the states based on polar coordinates.Without lost of generality a $\textbf{$X_{I}$,$Y_{I}$}$ reference system is associated to the position and orientation desired with orientation  set for the orientation desired. Where $\textbf{$X_{R}$,$Y_{R}$}$ represent the reference system of the proper robot.
-
-The robot position is ($x_{d}$-$x$, $y_{d}$-$y$) in the inertial reference system. And the distance until the desired point is represented by $\rho$. When $\alpha \leq \pi/2 $ is set up, the desired point is located in front of the robot and you have:
-
+An alternative way of getting a soft control about position and orientation for a differential robot is throughout a control linear law for feedback  of the states based on polar coordinates. Polar controller equations are:
 \begin{equation}
 	\rho = \sqrt[]{(x_{d} - x)^2 + (y_{d} - y)^2} 
 \end{equation}
@@ -90,7 +87,6 @@ The robot position is ($x_{d}$-$x$, $y_{d}$-$y$) in the inertial reference syste
 \end{equation}
 
 Considering these variables shown, the following control law can be used for the linear speed and for the angular velocity of the robot:
-
 \begin{equation}
 	v = k_{\rho}\rho
 \end{equation}
@@ -210,16 +206,16 @@ To perform this test, two boxes were placed in the workspace. The position was p
 \begin{figure}
 	\centering
 	%\subfloat [Kobuki with lidar in workspace]{\includegraphics[width = 70mm]{kobuki_201.jpg}}\\
-	\subfloat[Attractive force applied kobuki with lidar]{\includegraphics[width = 70mm]{fattr_lidar.png}}\\
-	\subfloat[Attractive force applied kobuki with lidar]{\includegraphics[width = 70mm]{frep_lidar.png}}\\
-	\subfloat[Attractive force applied kobuki with lidar]{\includegraphics[width = 70mm]{fnav_lidar.png}}\\
+	\subfloat[Attractive force applied kobuki with lidar]{\includegraphics[width = 90mm]{fattr_lidar.png}}\\
+	\subfloat[Attractive force applied kobuki with lidar]{\includegraphics[width = 90mm]{frep_lidar.png}}\\
+	\subfloat[Attractive force applied kobuki with lidar]{\includegraphics[width = 90mm]{fnav_lidar.png}}\\
 	\caption{Autonomous navigation with lidar implemented on Kobuki} \label{f:kbki_lidar}
 \end{figure}
 
 \section{Conclusion}
 \label{sec:conclusion}
-This paper presented a methodology based on obtaining a sequence of points from a given image, and a inverse kinematics controller for the arm of a robot. Image processing based on edge detection, morphological operations and topological skeletonization was able to render an image from which points could be obtained. A numerical approach for inverse kinematics showed a real-time behavior without several delays. The motion of the NAO robot presents some inherent low-level control problems that deviate from the expected results. Future work will address these problems with a more robust control scheme and a cleaner image processing methodology. Also, writing with both hands at the same time will be explored as a capability that a robot can do but a typical human cannot.
-
+We presented a controller based on Artificial Potential Field and a closed-loop feedback controller for navigation tasks of a differential drive robot. The motion controller differs from other works because it bases its frame in polar coordinates. Results for the motion controller proved to be a solution to the non-holonomic constraints that the robot presents. In the same way, the performance of the robot in simulation shows its rapid convergence through smooth trajectories.
+Tests on the Kobuki robot show successful results. It also demonstrates the robot's autonomy despite the unknown configuration of the environment, since only odometry is used. It is demonstrated that by placing the lidar on the Kobuki robot, it can decide its obstacles in real time and can evade them without any problem reaching the goal.
 \bibliographystyle{IEEEtran}
 \bibliography{biblio.bib}
 \end{document}
