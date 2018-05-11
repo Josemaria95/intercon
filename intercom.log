@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.4.7)  10 MAY 2018 19:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.4.7)  10 MAY 2018 20:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -642,12 +642,6 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
 
-<control_polar.png, id=1, 613.29124pt x 482.80376pt>
-File: control_polar.png Graphic file (type png)
- <use control_polar.png>
-Package pdftex.def Info: control_polar.png used on input line 73.
-(pdftex.def)             Requested size: 126.0pt x 99.18904pt.
-
 [1
 Non-PDF special ignored!
 Non-PDF special ignored!
@@ -660,104 +654,107 @@ Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
 
- <./control_polar.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 104--105
+]
+Underfull \hbox (badness 10000) in paragraph at lines 105--106
 
  []
 
 
-Underfull \hbox (badness 1389) in paragraph at lines 124--125
+Underfull \hbox (badness 1389) in paragraph at lines 125--126
 []\T1/ptm/m/n/10 The gra-di-ent vec-tor points away from the goal with
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 124--125
+Underfull \hbox (badness 10000) in paragraph at lines 125--126
 
  []
 
-<attr_force.png, id=13, 677.53125pt x 725.71124pt>
+
+Underfull \vbox (badness 1990) has occurred while \output is active []
+
+
+<attr_force.png, id=16, 677.53125pt x 725.71124pt>
 File: attr_force.png Graphic file (type png)
  <use attr_force.png>
-Package pdftex.def Info: attr_force.png used on input line 166.
+Package pdftex.def Info: attr_force.png used on input line 167.
 (pdftex.def)             Requested size: 113.81102pt x 121.8965pt.
 
-<rep_force.png, id=14, 689.57625pt x 727.71875pt>
+<rep_force.png, id=17, 689.57625pt x 727.71875pt>
 File: rep_force.png Graphic file (type png)
  <use rep_force.png>
-Package pdftex.def Info: rep_force.png used on input line 167.
+Package pdftex.def Info: rep_force.png used on input line 168.
 (pdftex.def)             Requested size: 113.81102pt x 120.10172pt.
 
-<nav_force.png, id=15, 689.57625pt x 723.70375pt>
+<nav_force.png, id=18, 689.57625pt x 723.70375pt>
 File: nav_force.png Graphic file (type png)
  <use nav_force.png>
-Package pdftex.def Info: nav_force.png used on input line 168.
+Package pdftex.def Info: nav_force.png used on input line 169.
 (pdftex.def)             Requested size: 113.81102pt x 119.43909pt.
- [2]
 Missing character: There is no Â in font cmr10!
 Missing character: There is no ° in font cmr10!
-
-<tvsxy_tesis.png, id=25, 578.16pt x 433.62pt>
+ [2]
+<tvsxy_tesis.png, id=24, 578.16pt x 433.62pt>
 File: tvsxy_tesis.png Graphic file (type png)
  <use tvsxy_tesis.png>
-Package pdftex.def Info: tvsxy_tesis.png used on input line 181.
+Package pdftex.def Info: tvsxy_tesis.png used on input line 182.
 (pdftex.def)             Requested size: 113.81102pt x 85.35284pt.
 
-<tvsv_tesis.png, id=27, 578.16pt x 433.62pt>
+<tvsv_tesis.png, id=26, 578.16pt x 433.62pt>
 File: tvsv_tesis.png Graphic file (type png)
  <use tvsv_tesis.png>
-Package pdftex.def Info: tvsv_tesis.png used on input line 182.
+Package pdftex.def Info: tvsv_tesis.png used on input line 183.
 (pdftex.def)             Requested size: 113.81102pt x 85.35284pt.
 
-<tvstheta_tesis.png, id=28, 578.16pt x 433.62pt>
+<tvstheta_tesis.png, id=27, 578.16pt x 433.62pt>
 File: tvstheta_tesis.png Graphic file (type png)
  <use tvstheta_tesis.png>
-Package pdftex.def Info: tvstheta_tesis.png used on input line 183.
+Package pdftex.def Info: tvstheta_tesis.png used on input line 184.
 (pdftex.def)             Requested size: 113.81102pt x 85.35284pt.
 
-<tvsomega_tesis.png, id=29, 578.16pt x 433.62pt>
+<tvsomega_tesis.png, id=28, 578.16pt x 433.62pt>
 File: tvsomega_tesis.png Graphic file (type png)
  <use tvsomega_tesis.png>
-Package pdftex.def Info: tvsomega_tesis.png used on input line 184.
+Package pdftex.def Info: tvsomega_tesis.png used on input line 185.
 (pdftex.def)             Requested size: 113.81102pt x 85.35284pt.
 Missing character: There is no Â in font cmr10!
 Missing character: There is no ° in font cmr10!
 Missing character: There is no Â in font cmr10!
 Missing character: There is no ° in font cmr10!
 
-<attr_kbki.png, id=30, 1441.385pt x 776.9025pt>
+<attr_kbki.png, id=29, 1441.385pt x 776.9025pt>
 File: attr_kbki.png Graphic file (type png)
  <use attr_kbki.png>
-Package pdftex.def Info: attr_kbki.png used on input line 198.
+Package pdftex.def Info: attr_kbki.png used on input line 199.
 (pdftex.def)             Requested size: 199.16928pt x 107.34305pt.
 
-<rep_kbki.png, id=31, 1427.3325pt x 758.835pt>
+<rep_kbki.png, id=30, 1427.3325pt x 758.835pt>
 File: rep_kbki.png Graphic file (type png)
  <use rep_kbki.png>
-Package pdftex.def Info: rep_kbki.png used on input line 199.
+Package pdftex.def Info: rep_kbki.png used on input line 200.
 (pdftex.def)             Requested size: 199.16928pt x 105.87723pt.
 
-<nav_kbki.png, id=32, 1434.35875pt x 759.83875pt>
+<nav_kbki.png, id=31, 1434.35875pt x 759.83875pt>
 File: nav_kbki.png Graphic file (type png)
  <use nav_kbki.png>
-Package pdftex.def Info: nav_kbki.png used on input line 200.
+Package pdftex.def Info: nav_kbki.png used on input line 201.
 (pdftex.def)             Requested size: 199.16928pt x 105.50713pt.
 
-<fattr_lidar.png, id=33, 1434.35875pt x 758.835pt>
+<fattr_lidar.png, id=32, 1434.35875pt x 758.835pt>
 File: fattr_lidar.png Graphic file (type png)
  <use fattr_lidar.png>
-Package pdftex.def Info: fattr_lidar.png used on input line 209.
+Package pdftex.def Info: fattr_lidar.png used on input line 213.
 (pdftex.def)             Requested size: 199.16928pt x 105.36775pt.
 
-<frep_lidar.png, id=34, 1437.37pt x 754.82pt>
+<frep_lidar.png, id=33, 1437.37pt x 754.82pt>
 File: frep_lidar.png Graphic file (type png)
  <use frep_lidar.png>
-Package pdftex.def Info: frep_lidar.png used on input line 210.
+Package pdftex.def Info: frep_lidar.png used on input line 214.
 (pdftex.def)             Requested size: 199.16928pt x 104.59142pt.
 
-<fnav_lidar.png, id=35, 1424.32124pt x 759.83875pt>
+<fnav_lidar.png, id=34, 1424.32124pt x 759.83875pt>
 File: fnav_lidar.png Graphic file (type png)
  <use fnav_lidar.png>
-Package pdftex.def Info: fnav_lidar.png used on input line 211.
+Package pdftex.def Info: fnav_lidar.png used on input line 215.
 (pdftex.def)             Requested size: 199.16928pt x 106.24916pt.
 
 [3 <./attr_force.png> <./rep_force.png> <./nav_force.png> <./tvsxy_tesis.png> <
@@ -777,13 +774,13 @@ Before submitting the final camera ready copy, remember to:
 [4 <./attr_kbki.png> <./rep_kbki.png> <./nav_kbki.png> <./fattr_lidar.png> <./f
 rep_lidar.png> <./fnav_lidar.png>] (./intercom.aux) ) 
 Here is how much of TeX's memory you used:
- 12744 strings out of 493029
- 219162 string characters out of 6136235
- 302466 words of memory out of 5000000
- 16086 multiletter control sequences out of 15000+600000
+ 12738 strings out of 493029
+ 219047 string characters out of 6136235
+ 302458 words of memory out of 5000000
+ 16081 multiletter control sequences out of 15000+600000
  107532 words of font info for 107 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 61i,11n,96p,1224b,451s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 61i,11n,96p,1224b,455s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-
 dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
@@ -796,10 +793,10 @@ live/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/time
 s/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on intercom.pdf (4 pages, 1249565 bytes).
+Output written on intercom.pdf (4 pages, 1228717 bytes).
 PDF statistics:
- 85 PDF objects out of 1000 (max. 8388607)
+ 84 PDF objects out of 1000 (max. 8388607)
  48 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 71 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 66 words of extra memory for PDF output out of 10000 (max. 10000000)
 
