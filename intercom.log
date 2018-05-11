@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.4.7)  10 MAY 2018 19:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.4.7)  10 MAY 2018 19:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -693,6 +693,9 @@ File: nav_force.png Graphic file (type png)
 Package pdftex.def Info: nav_force.png used on input line 168.
 (pdftex.def)             Requested size: 113.81102pt x 119.43909pt.
  [2]
+Missing character: There is no Â in font cmr10!
+Missing character: There is no ° in font cmr10!
+
 <tvsxy_tesis.png, id=25, 578.16pt x 433.62pt>
 File: tvsxy_tesis.png Graphic file (type png)
  <use tvsxy_tesis.png>
@@ -742,24 +745,24 @@ Package pdftex.def Info: nav_kbki.png used on input line 200.
 <fattr_lidar.png, id=33, 1434.35875pt x 758.835pt>
 File: fattr_lidar.png Graphic file (type png)
  <use fattr_lidar.png>
-Package pdftex.def Info: fattr_lidar.png used on input line 208.
+Package pdftex.def Info: fattr_lidar.png used on input line 209.
 (pdftex.def)             Requested size: 199.16928pt x 105.36775pt.
 
 <frep_lidar.png, id=34, 1437.37pt x 754.82pt>
 File: frep_lidar.png Graphic file (type png)
  <use frep_lidar.png>
-Package pdftex.def Info: frep_lidar.png used on input line 209.
+Package pdftex.def Info: frep_lidar.png used on input line 210.
 (pdftex.def)             Requested size: 199.16928pt x 104.59142pt.
 
 <fnav_lidar.png, id=35, 1424.32124pt x 759.83875pt>
 File: fnav_lidar.png Graphic file (type png)
  <use fnav_lidar.png>
-Package pdftex.def Info: fnav_lidar.png used on input line 210.
+Package pdftex.def Info: fnav_lidar.png used on input line 211.
 (pdftex.def)             Requested size: 199.16928pt x 106.24916pt.
 
-(./intercom.bbl [3 <./attr_force.png> <./rep_force.png> <./nav_force.png> <./tv
-sxy_tesis.png> <./tvsv_tesis.png> <./tvstheta_tesis.png> <./tvsomega_tesis.png>
-])
+[3 <./attr_force.png> <./rep_force.png> <./nav_force.png> <./tvsxy_tesis.png> <
+./tvsv_tesis.png> <./tvstheta_tesis.png> <./tvsomega_tesis.png>]
+(./intercom.bbl)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -774,13 +777,13 @@ Before submitting the final camera ready copy, remember to:
 [4 <./attr_kbki.png> <./rep_kbki.png> <./nav_kbki.png> <./fattr_lidar.png> <./f
 rep_lidar.png> <./fnav_lidar.png>] (./intercom.aux) ) 
 Here is how much of TeX's memory you used:
- 12747 strings out of 493029
- 219182 string characters out of 6136235
- 302470 words of memory out of 5000000
- 16089 multiletter control sequences out of 15000+600000
+ 12744 strings out of 493029
+ 219162 string characters out of 6136235
+ 302466 words of memory out of 5000000
+ 16086 multiletter control sequences out of 15000+600000
  107532 words of font info for 107 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 61i,11n,96p,1226b,451s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 61i,11n,96p,1224b,451s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-
 dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
@@ -793,7 +796,7 @@ live/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/time
 s/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on intercom.pdf (4 pages, 1244990 bytes).
+Output written on intercom.pdf (4 pages, 1249565 bytes).
 PDF statistics:
  85 PDF objects out of 1000 (max. 8388607)
  48 compressed objects within 1 object stream

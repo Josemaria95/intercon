@@ -46,22 +46,22 @@
 % }
 \maketitle
 \begin{abstract}
-
+The differential wheeled robot is widely used for navigation tasks. However it has limitation in its motion because its non-holonomic constraints. In this work, we propose an algorithm which drives a two-wheeled robot through a collision-free trajectory smoothly. For the generation of trajectories, it was implemented Artificial Potential Fields (APF) for a sensed environment through a depth sensor. Paths are followed through an iterative closed-loop feedback controller based in polar coordinates which works for semi-trajectories so they can be guided from the vector forces  of APF. Results were obtained from simulations in Gazebo software for the Kobuki model and from the implementation of the algorithm in real Kobuki robot sensing  with a Lidar sensor.
 \end{abstract}
 \IEEEpeerreviewmaketitle
 % \textbf{\textit{Keywords - NAO Robot, Inverse Kinematics, Image Processing, Drawing Imitation}}
 
 \section{Introduction}
 
-Mobile robots have become an extended field of research due to its applications in exploration and navigation on ground, see for example \cite{Desouza}\cite{Bonin-Font2008}. In practice, the differential wheeled robot is widely used because its dynamics and physical structure are not complex. However, the application in navigation of these robots deals with some problems for the controllability of its kinematics.
+Mobile robots have become an extended field of research due to its applications in exploration and navigation on ground, see for example \cite{Bonin-Font2008}. In practice, the differential wheeled robot is widely used because its dynamics and physical structure are not complex. However, the application in navigation of these robots deals with some problems for the controllability of its kinematics.
 
-The robot is a non-holonomic system, so the controllability of these robots is difficult to achieve. This issue is currently presented when is needed a trajectory tracking in a closed environment. For example, the robot can not achieve a goal smoothly because its orientation is significantly important to its motion. The treatment of this problem has gone through different approaches, see \cite{Rubayat}\cite{Samson}\cite{Sung-On}. In general, the approaches can be divided for the model in a different system of coordinates. The recent research has dealt with it using polar coordinates, because it eliminates some constraints given in the Cartesian coordinate system. According to \cite{Matoui}, the control laws based on these coordinates have the potential to achieve an exponential stability smoothly through a closed-loop control. However, the mathematical formulation of these control laws do not consider trajectory constraints. The polar control laws can be used for obstacle avoidance if it is stated middle goals in which the robot can avoid them. However, these middle goals must be formulated arbitrarily, which is not a good approach for the autonomy of the robot in a navigation task.
+The robot is a non-holonomic system, so the controllability of these robots is difficult to achieve. This issue is currently presented when is needed a trajectory tracking in a closed environment. For example, the robot can not achieve a goal smoothly because its orientation is significantly important to its motion. The treatment of this problem has gone through different approaches, see \cite{Rubayat}. In general, the approaches can be divided for the model in a different system of coordinates. The recent research has dealt with it using polar coordinates, because it eliminates some constraints given in the Cartesian coordinate system. According to \cite{Matoui}, the control laws based on these coordinates have the potential to achieve an exponential stability smoothly through a closed-loop control. However, the mathematical formulation of these control laws do not consider trajectory constraints. The polar control laws can be used for obstacle avoidance if it is stated middle goals in which the robot can avoid them. However, these middle goals must be formulated arbitrarily, which is not a good approach for the autonomy of the robot in a navigation task.
 
-On the other hand, the practical application of these robots deals with an environment with obstacles, so it is necessary to overcome this limitation of the control.  One of the most common methods to solve the path planning problem is artificial potential field (APF). The research in this field has shown that APF is an immediate alternative on mobile robots, see \cite{Woods}\cite{Merheb}. However, for the two-wheeled robot, its non-holonomic problem impede a normal path planning through this method. The artificial attractive or repulsive forces formulate trajectories which the robot cannot follow through conventional control methods. 
+On the other hand, the practical application of these robots deals with an environment with obstacles, so it is necessary to overcome this limitation of the control.  One of the most common methods to solve the path planning problem is artificial potential field (APF). The research in this field has shown that APF is an immediate alternative on mobile robots, see \cite{Woods}. However, for the two-wheeled robot, its non-holonomic problem impede a normal path planning through this method. The artificial attractive or repulsive forces formulate trajectories which the robot cannot follow through conventional control methods. 
 
 In this work, the authors propose a control based on potential field and on polar control laws for the kinematics of the two-wheeled robot, so it can achieve smoothly a validated trajectory to reach to a position goal. Experimental results were obtained through the implementation of each individual controller in a Kobuki model for a virtual workspace in Gazebo simulator. Posteriorly, the integration of the controllers for obtaining the proposed control is implemented in a real Kobuki robot powered with a Lidar sensor for obtainment of position obstacles. 
  
-This work is structured as follows. In section "", it is introduced the forward and inverse kinematics. Section "" formulates the potential field equation for its application as well as it is stated the control laws in the polar coordinate system. The section "" it presents the control system integration and its implementation in the Kobuki robot through the ROS system. Finally, the experimental results and conclusion are shown to give details of the implementation.
+This work is structured as follows. In section \ref{sec:robot_motion}, it is introduced the forward and inverse kinematics. Section  \ref{sec:APF} formulates the potential field equation for its application as well as it is stated the control laws in the polar coordinate system.Finally, the experimental results and conclusion are shown to give details of the implementation.
 
 \section{Robot Motion Generation}
 \label{sec:robot_motion}
@@ -174,7 +174,7 @@ To check the efficiency of the algorithm, it was simulated graphically in a work
 
 The polar controller was implemented for the Kobuki motion in a virtual workspace in Gazebo with no obstacles. The prompt of the proofs was the robot to achieve a given a random goal position.  It was considered a start position in the origin of the frame and the desired position ($x,y,\theta$) respect to the same inertial frame. The state variables (velocity, position and orientation) of the robot was obtained from odometry. The performance of the robot for one of the experimental cases is shown in the following figures.
 
-The graphical results show the performance of the robot for a goal position () and orientation (). The start time of simulation is approximately 7 seconds because of a delay of the software. For every figure, the variation of the variable is immediate and in a homogeneous convergence time. In contrast, the figure []  shows a rapid convergence of the position compared to the other variables. In the same way, in figure [], there is a peak in the curve which diverges from the goal orientation. These results proves an over-dependence of the controller to the position instead of the orientation. This characteristic is mainly upward for a navigation resolution.
+The graphical results show the performance of the robot for a goal position ($x = 3,y = 3$) and orientation ($\theta = 90°$). The start time of simulation is approximately 7 seconds because of a delay of the software. For every figure, the variation of the variable is immediate and in a homogeneous convergence time. In contrast, the Figure \ref{f:polar}(a) shows a rapid convergence of the position compared to the other variables. In the same way, in Figure \ref{f:polar}(c), there is a peak in the curve which diverges from the goal orientation. These results proves an over-dependence of the controller to the position instead of the orientation. This characteristic is mainly upward for a navigation resolution.
 
 \begin{figure}
 	\centering
@@ -198,16 +198,18 @@ Figure \ref{f:kbki}(c) shows the superposition of the forces with the actual obs
 	\subfloat[Attractive force applied to the mobile robot]{\includegraphics[width = 70mm]{attr_kbki.png}}\\
 	\subfloat[Repulsive force applied to the mobile robot] {\includegraphics[width = 70mm]{rep_kbki.png}}\\
 	\subfloat[Navigation force applied to the mobile robot]{\includegraphics[width = 70mm]{nav_kbki.png}}
-	\caption{APF + Polar controller implemented on Kobuki} \label{f:kbki}
+	\caption{Autonomous navigation implemented on Kobuki} \label{f:kbki}
 \end{figure}
 
-\subsection{Navigation with Lidar}
+\subsection{Autonomous Navigation with Lidar}
+
 
 \begin{figure}
 	\centering
 	\subfloat[Attractive force applied kobuki with lidar]{\includegraphics[width = 70mm]{fattr_lidar.png}}\\
 	\subfloat[Attractive force applied kobuki with lidar]{\includegraphics[width = 70mm]{frep_lidar.png}}\\
 	\subfloat[Attractive force applied kobuki with lidar]{\includegraphics[width = 70mm]{fnav_lidar.png}}\\
+	\caption{Autonomous navigation with lidar implemented on Kobuki} \label{f:kbki_lidar}
 \end{figure}
 
 \section{Conclusion}
