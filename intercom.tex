@@ -53,11 +53,11 @@
 
 \section{Introduction}
 
-Mobile robots have become an extended field of research due to its applications in exploration and navigation on ground, see for example [][]. In practice, the differential wheeled robot is widely used because its dynamics and physical structure are not complex. However, the application in navigation of these robots deals with some problems for the controllability of its kinematics.
+Mobile robots have become an extended field of research due to its applications in exploration and navigation on ground, see for example \cite{Desouza}\cite{Bonin-Font2008}. In practice, the differential wheeled robot is widely used because its dynamics and physical structure are not complex. However, the application in navigation of these robots deals with some problems for the controllability of its kinematics.
 
-The robot is a non-holonomic system, so the controllability of these robots is difficult to achieve. This issue is currently presented when is needed a trajectory tracking in a closed environment. For example, the robot can not achieve a goal smoothly because its orientation is significantly important to its motion. The treatment of this problem has gone through different approaches, see [][][]. In general, the approaches can be divided for the model in a different system of coordinates. The recent research has dealt with it using polar coordinates, because it eliminates some constraints given in the Cartesian coordinate system. According to [], the control laws based on these coordinates have the potential to achieve an exponential stability smoothly through a closed-loop control. However, the mathematical formulation of these control laws do not consider trajectory constraints. The polar control laws can be used for obstacle avoidance if it is stated middle goals in which the robot can avoid them. However, these middle goals must be formulated arbitrarily, which is not a good approach for the autonomy of the robot in a navigation task.
+The robot is a non-holonomic system, so the controllability of these robots is difficult to achieve. This issue is currently presented when is needed a trajectory tracking in a closed environment. For example, the robot can not achieve a goal smoothly because its orientation is significantly important to its motion. The treatment of this problem has gone through different approaches, see \cite{Rubayat}\cite{Samson}\cite{Sung-On}. In general, the approaches can be divided for the model in a different system of coordinates. The recent research has dealt with it using polar coordinates, because it eliminates some constraints given in the Cartesian coordinate system. According to \cite{Matoui}, the control laws based on these coordinates have the potential to achieve an exponential stability smoothly through a closed-loop control. However, the mathematical formulation of these control laws do not consider trajectory constraints. The polar control laws can be used for obstacle avoidance if it is stated middle goals in which the robot can avoid them. However, these middle goals must be formulated arbitrarily, which is not a good approach for the autonomy of the robot in a navigation task.
 
-On the other hand, the practical application of these robots deals with an environment with obstacles, so it is necessary to overcome this limitation of the control.  One of the most common methods to solve the path planning problem is artificial potential field (APF). The research in this field has shown that APF is an immediate alternative on mobile robots, see [7][8][9]. However, for the two-wheeled robot, its non-holonomic problem impede a normal path planning through this method. The artificial attractive or repulsive forces formulate trajectories which the robot cannot follow through conventional control methods. 
+On the other hand, the practical application of these robots deals with an environment with obstacles, so it is necessary to overcome this limitation of the control.  One of the most common methods to solve the path planning problem is artificial potential field (APF). The research in this field has shown that APF is an immediate alternative on mobile robots, see \cite{Woods}\cite{Merheb}. However, for the two-wheeled robot, its non-holonomic problem impede a normal path planning through this method. The artificial attractive or repulsive forces formulate trajectories which the robot cannot follow through conventional control methods. 
 
 In this work, the authors propose a control based on potential field and on polar control laws for the kinematics of the two-wheeled robot, so it can achieve smoothly a validated trajectory to reach to a position goal. Experimental results were obtained through the implementation of each individual controller in a Kobuki model for a virtual workspace in Gazebo simulator. Posteriorly, the integration of the controllers for obtaining the proposed control is implemented in a real Kobuki robot powered with a Lidar sensor for obtainment of position obstacles. 
  
@@ -70,7 +70,7 @@ For a navigation approach in a wheeled differential robot, it is necessary to co
 \subsection{Polar controller}
 
 \begin{figure}[h]
-  \includegraphics[width=0.9\linewidth]{control_polar.png}
+  \includegraphics[width=0.5\linewidth]{control_polar.png}
   \centering\caption{Feedback control of states to a reference position}
   \label{fig:Polar}
 \end{figure}
@@ -163,9 +163,9 @@ To check the efficiency of the algorithm, it was simulated graphically in a work
 
 \begin{figure}[ht!]
 	\centering
-	\subfloat[Attractive Force]{\includegraphics[width=90mm]{attr_force.png}}\\
-	\subfloat[Repulsive Force]{\includegraphics[width = 90mm]{rep_force.png}}\\
-	\subfloat[Navigation Force]{\includegraphics[width = 100mm]{nav_force.png}}\\
+	\subfloat[Attractive Force]{\includegraphics[width=40mm]{attr_force.png}}
+	~\subfloat[Repulsive Force]{\includegraphics[width =40mm]{rep_force.png}}\\
+	\subfloat[Navigation Force]{\includegraphics[width =40mm]{nav_force.png}}
 %\subfloat[Attractive Force]{\includegraphics[width = 150mm]{attr_force.png}}
 	\caption{Potential Field Algorithm} \label{f:apf}
 \end{figure}
@@ -178,52 +178,37 @@ The graphical results show the performance of the robot for a goal position () a
 
 \begin{figure}
 	\centering
-	\subfloat[time vs position]{\includegraphics[width = 50mm]{tvsxy_tesis.png}}
-	~\subfloat[time vs linear velocity]{\includegraphics[width = 50mm]{tvsv_tesis.png}}\\
-	\subfloat[time vs theta]{\includegraphics[width = 50mm]{tvstheta_tesis.png}}
-	~\subfloat[time vs angular velocity]{\includegraphics[width = 50mm]{tvsomega_tesis.png}}
+	\subfloat[time vs position]{\includegraphics[width = 40mm]{tvsxy_tesis.png}}
+	~\subfloat[time vs linear velocity]{\includegraphics[width = 40mm]{tvsv_tesis.png}}\\
+	\subfloat[time vs theta]{\includegraphics[width = 40mm]{tvstheta_tesis.png}}
+	~\subfloat[time vs angular velocity]{\includegraphics[width = 40mm]{tvsomega_tesis.png}}
 	\caption{Polar controller for desired position $x=3, y=3, \theta=90°$} \label{f:polar}
 \end{figure}
 
-%The proposed methodology was tested on a real NAO robot. As previously described, ROS was used throughout this work. The image was first acquired with the robot frontal camera using OpenCV in Python through opencv bridge, which enables the use of OpenCV with ROS. This raw image was published in a ROS topic and another node processed the image as previously described. The resulting desired features are then sent to another ROS topic that stores them and updates them as needed. The motion control part is implemented in another node that reads the topic containing the desired points and sends the joint commands to the robot through the NAOqi bridge for ROS.
-
 \subsection{Autonomous Navigation}
+The proposed controller was implemented through an iterative algorithm for the Kobuki robot in a fixed environment. The algorithm takes middle goal position iteratively through the artificial potential field and it is drived by the polar controller to achieve them. We exposed to the robot to different obstacles whose positions were stated from a measurement of the physical of the environment, so it was not sensed by the robot. The performance of the robot is  shown in the following figures:
+
+Figure \ref{f:kbki}(a) is composed of the attractive forces for every position(red dots) in which the algorithm is iterated in the two-dimensional environment within robot motion. It proves that for every position the attractive potential field drives the robot to the goal position. The trajectory shown in this figure is not forward to the goal because of the obstacles, which are not considered for the attractive APF. 
+
+Figure \ref{f:kbki}(b) is composed for the repulsive forces for every iteration in the same 2D environment. The obstacles are shown in the graphic as green markers. The forces are only applied, as it was formulated above, for less than a arbitrarily range (for this result it was considered 1 meter). For each obstacle, the magnitude of the forces  increases as long as the robot is closer to it. Also, its direction points toward to the position of the robot, so it bring an opposite force to the attractive potential field.
+
+Figure \ref{f:kbki}(c) shows the superposition of the forces with the actual obstacles. Each forces provides a middle goal position for the robot, thus it is the input variable for the polar controller. Even though the forces close to the obstacles have a high rate of change, the trajectory is smooth. It demonstrates the effectiveness of the polar controller despite its non-holonomic charateristic. 
+\begin{figure}
+	\centering
+	\subfloat[Attractive force applied to the mobile robot]{\includegraphics[width = 70mm]{attr_kbki.png}}\\
+	\subfloat[Repulsive force applied to the mobile robot] {\includegraphics[width = 70mm]{rep_kbki.png}}\\
+	\subfloat[Navigation force applied to the mobile robot]{\includegraphics[width = 70mm]{nav_kbki.png}}
+	\caption{APF + Polar controller implemented on Kobuki} \label{f:kbki}
+\end{figure}
+
+\subsection{Navigation with Lidar}
 
 \begin{figure}
 	\centering
-	\subfloat[Attractive force applied to the mobile robot]{\includegraphics[width = 100mm]{attr_kbki.png}}\\
-	\subfloat[Repulsive force applied to the mobile robot]{\includegraphics[width = 100mm]{rep_kbki.png}}\\
-	\subfloat[Navigation force applied to the mobile robot]{\includegraphics[width = 100mm]{nav_kbki.png}}
-	\caption{APF + Polar controller implemented on Kobuki} \label{f:kbki}
+	\subfloat[Attractive force applied kobuki with lidar]{\includegraphics[width = 70mm]{fattr_lidar.png}}\\
+	\subfloat[Attractive force applied kobuki with lidar]{\includegraphics[width = 70mm]{frep_lidar.png}}\\
+	\subfloat[Attractive force applied kobuki with lidar]{\includegraphics[width = 70mm]{fnav_lidar.png}}\\
 \end{figure}
-%A result that shows the procedure for a hand made drawing is used as input to the camera is shown in Figure~\ref{f:triangle}a. The results after applying a Canny edge detector with a proper threshold value and a morphological closing (dilation followed by erosion) are shown in Figure~\ref{f:triangle}b, c. Figure~\ref{f:triangle}d shows the resulting image after skeletonization. The desired points are obtained from this latter image, by following the neighboring pixels in a subsequent order, and are fed to the robot controller. The results for the processing of the real 3D scene are shown in Figure~\ref{f:cup}. As can be seen, the input is a tea cup on a table in an office. The processing steps are similar to the previous case and are shown in parts b, c and d. It can be observed in Figure~\ref{f:cup}d that in this case it is not straightforward to determine the path that the desired motion should follow. Different non connected paths are generated and the robot has to raise and lower the end effector (marker or pen) several times to achieve the desired result. This is an initial test and further study of the problem can potentially lead to better skeletons, although edge detection is not a trivial problem.
-%\begin{figure}%[htb]
-%\centering
-%\subfloat[Original Image]{\includegraphics[width=40mm]{orig_tria.jpg}}
-%~\subfloat[Edges using Canny]{\includegraphics[width=40mm]{canny_tria.jpg}}\\
-%%~\subfloat[Dilated image]{\includegraphics[width=40mm]{dilate_tria.jpg}}
-%\subfloat[Morphologically closed image]{\includegraphics[width=40mm]{erode_tria.jpg}}
-%~\subfloat[Desired skeleton]{\includegraphics[width=40mm]{skel_tria.jpg}}
-%\caption{Image processing steps for a 2D drawing} \label{f:triangle}
-%\end{figure}
-
-%The obtained points are then sent to the robot controller. In this case, the robot kinematics is based on RBDL (Rigid Body Dynamics Library) which parses the URDF model of the robot and provides some basic forward kinematics. However, the rest of the control algorithm is completely developed using the methods shown in the previous sections. An example of the obtained robot motion is shown in Figure~\ref{f:nao-sim} where the green ball shows the target point and the red ball the current point. These points are with respect to the wrist since the desired points on the drawing surface are mapped to the wrist by a simple transformation.
-%\begin{figure}[htb]
-%\centering
-%\subfloat[Original Image]{\includegraphics[width=40mm]{imagen_original.jpg}}
-%~\subfloat[Edges using Canny]{\includegraphics[width=40mm]{canny_taza.jpg}}\\
-%%~\subfloat[Dilate Image]{\includegraphics[width=40mm]{dilation_taza.jpg}}
-%\subfloat[Morphologically closed image]{\includegraphics[width=40mm]{erode_taza.jpg}}
-%~\subfloat[Skeletonized image]{\includegraphics[width=40mm]{skel_taza.jpg}}
-%\caption{Image processing steps for a 3D real scene} \label{f:cup}
-%\end{figure}
-
-%\begin{figure}
-%\centering
-%\includegraphics[scale=0.3]{nao1.png}
-%\caption{Motion of the NAO robot in simulation}
-%\label{f:nao-sim}
-%\end{figure}
 
 \section{Conclusion}
 \label{sec:conclusion}
