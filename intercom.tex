@@ -90,10 +90,7 @@ In this work, we propose an autonomous motion framework based on potential field
   \subfloat
   {\includegraphics[width=0.3\textwidth]{kobuki}}
   \captionsetup{font=footnotesize}
-  \caption{Front and top views of a generated motion for the model of a
-    quadruped robot with a floating base: the robot rotates its body while
-    lowering it, raising a frontal leg and maintaining the other three legs on
-    the ground.}
+  \caption{Experimental setup for testing the autonomy of the mobile robot}
   \label{fig:example-robot}
 \end{figure}
 
@@ -225,9 +222,9 @@ Figure \ref{f:kbki}(b) is composed for the repulsive forces for every iteration 
 Figure \ref{f:kbki}(c) shows the superposition of the forces with the actual obstacles. Each forces provides a middle goal position for the robot, thus it is the input variable for the polar controller. Even though the forces close to the obstacles have a high rate of change, the trajectory is smooth. It demonstrates the effectiveness of the polar controller despite its non-holonomic charateristic. 
 \begin{figure}
 	\centering
-	\subfloat[Attractive force applied to the mobile robot]{\includegraphics[width = 70mm]{attr_kbki.png}}\\
-	\subfloat[Repulsive force applied to the mobile robot] {\includegraphics[width = 70mm]{rep_kbki.png}}\\
-	\subfloat[Navigation force applied to the mobile robot]{\includegraphics[width = 70mm]{nav_kbki.png}}
+	\subfloat[Attractive force applied to the mobile robot]{\includegraphics[width = 65mm]{attr_kbki.png}}\\
+	\subfloat[Repulsive force applied to the mobile robot] {\includegraphics[width = 65mm]{rep_kbki.png}}\\
+	\subfloat[Navigation force applied to the mobile robot]{\includegraphics[width = 65mm]{nav_kbki.png}}
 	\caption{Autonomous navigation implemented on Kobuki} \label{f:kbki}
 \end{figure}
 
@@ -239,9 +236,9 @@ To perform this test, two boxes were placed in the workspace. The position was p
 \begin{figure}
 	\centering
 	%\subfloat [Kobuki with lidar in workspace]{\includegraphics[width = 70mm]{kobuki_201.jpg}}\\
-	\subfloat[Attractive force applied kobuki with lidar]{\includegraphics[width = 90mm]{fattr_lidar.png}}\\
-	\subfloat[Attractive force applied kobuki with lidar]{\includegraphics[width = 90mm]{frep_lidar.png}}\\
-	\subfloat[Attractive force applied kobuki with lidar]{\includegraphics[width = 90mm]{fnav_lidar.png}}\\
+	\subfloat[Attractive force applied kobuki with lidar]{\includegraphics[width = 75mm]{fattr_lidar.png}}\\
+	\subfloat[Attractive force applied kobuki with lidar]{\includegraphics[width = 75mm]{frep_lidar.png}}\\
+	\subfloat[Attractive force applied kobuki with lidar]{\includegraphics[width = 75mm]{fnav_lidar.png}}\\
 	\caption{Autonomous navigation with lidar implemented on Kobuki} \label{f:kbki_lidar}
 \end{figure}
 
