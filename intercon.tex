@@ -108,7 +108,7 @@ using a Raspberri Pi3 computer, which allowed the robot to achieve autonomy.
 \begin{figure}%[h]
   \centering \footnotesize
   \subfloat
-  {\includegraphics[width=0.4\textwidth]{kobuki}}
+  {\includegraphics[width=0.4\textwidth]{images/kobuki}}
   \captionsetup{font=footnotesize}
   \caption{Experimental setup for testing the autonomy of the mobile robot. A
     goal position is given behind the obstacles so that the robot cannot follow
@@ -155,7 +155,7 @@ $(x_d,y_d,\theta_d)$.
 \begin{figure}%[h]
  \centering \footnotesize
   \subfloat
-  {\includegraphics[width=0.7\linewidth]{control_polar.png}}
+  {\includegraphics[width=0.7\linewidth]{images/control_polar.png}}
   \captionsetup{font=footnotesize}
  \caption{Setup for the polar control where the current position of the robot
    as well as the goal position and specific parameters are shown.}
@@ -343,9 +343,9 @@ superposition of the attraction and repulsive forces is shown in Figure
 
 \begin{figure}%[ht!]
   \centering \footnotesize
-  \subfloat[Attractive Force]{\includegraphics[width=0.16\textwidth]{attr_force2.png}}
-  ~\subfloat[Repulsive Force]{\includegraphics[width=0.16\textwidth]{rep_force.png}} ~
-  \subfloat[Navigation Force]{\includegraphics[width=0.16\textwidth]{nav_force.png}}
+  \subfloat[Attractive Force]{\includegraphics[width=0.16\textwidth]{images/attr_force2.png}}
+  ~\subfloat[Repulsive Force]{\includegraphics[width=0.16\textwidth]{images/rep_force.png}} ~
+  \subfloat[Navigation Force]{\includegraphics[width=0.16\textwidth]{images/nav_force.png}}
   % \subfloat[Attractive Force]{\includegraphics[width = 150mm]{attr_force.png}}
   \captionsetup{font=footnotesize}
   \caption{Tests for the Potential Field Algorithm} \label{f:apf}
@@ -391,11 +391,10 @@ the controller on position instead of orientation.
 
 \begin{figure}
   \centering
-  \subfloat[Position (x) evolution]{\includegraphics[width = 40mm]{tvsxy_tesis.png}}
-  ~\subfloat[Linear velocity evolution]{\includegraphics[width = 40mm]{tvsv_tesis.png}}\\
-  \subfloat[Orientation evolution]{\includegraphics[width = 40mm]{tvstheta_tesis.png}}
-  ~\subfloat[Angular velocity evolution]{\includegraphics[width =
-    40mm]{tvsomega_tesis.png}}
+  \subfloat[Position (x) evolution]{\includegraphics[width = 40mm]{images/tvsxy_tesis.png}}
+  ~\subfloat[Linear velocity evolution]{\includegraphics[width = 40mm]{images/tvsv_tesis.png}}\\
+  \subfloat[Orientation evolution]{\includegraphics[width = 40mm]{images/tvstheta_tesis.png}}
+  ~\subfloat[Angular velocity evolution]{\includegraphics[width = 40mm]{images/tvsomega_tesis.png}}
   \captionsetup{font=footnotesize}
   \caption{Temporal evolution of the state variables using a polar controller
     to achieve a desired position given by $x=3, y=3, \theta=90°$} \label{f:polar}
@@ -431,7 +430,7 @@ which are shown as green markers.
 % non-holonomic charateristic.
 For each obstacle, the magnitude of the forces increases when the robot is
 closer to it, and their direction points out of the obstacles, allowing the
-robot to avoid them. Fig.~\\ref{f:kbki}(c) shows the superposition of both
+robot to avoid them. Fig.~\ref{f:kbki}(c) shows the superposition of both
 forces with the real obstacles. Each forces provides an intermediate goal
 position for the robot, constituting the continuously updated desired pose for
 the polar controller. Even though forces close to the obstacles have a high
@@ -446,11 +445,11 @@ the polar controller despite the non-holonomic characteristics of the robot.
 % \end{figure}
 \begin{figure}
   \centering
-  \subfloat[Attractive force applied to the mobile robot]{\includegraphics[width = 60mm]{attr_kbki.png}}\\
-  \subfloat[Repulsive force applied to the mobile robot] {\includegraphics[width = 60mm]{rep_kbki.png}}\\
-  \subfloat[Navigation force applied to the mobile robot]{\includegraphics[width = 60mm]{nav_kbki.png}}
+  \subfloat[Attractive force applied to the mobile robot]{\includegraphics[width = 65mm]{images/attr_kbki.png}}\\
+  \subfloat[Repulsive force applied to the mobile robot] {\includegraphics[width = 65mm]{images/rep_kbki.png}}\\
+  \subfloat[Navigation force applied to the mobile robot]{\includegraphics[width = 65mm]{images/nav_kbki.png}}
   \captionsetup{font=footnotesize}
-  \caption{Autonomous navigation implemented on Kobuki} \label{f:kbki}
+  \caption{Autonomous navigation implemented on the robot} \label{f:kbki}
 \end{figure}
 
 \subsection{Autonomous Navigation with Lidar}
@@ -506,9 +505,9 @@ shown.
 \begin{figure}
   \centering
   % \subfloat [Kobuki with lidar in workspace]{\includegraphics[width = 70mm]{kobuki_201.jpg}}\\
-  \subfloat[Online attractive force applied to the robot]{\includegraphics[width = 70mm]{fattr_lidar.png}}\\
-  \subfloat[Online repulsive force applied to the robot]{\includegraphics[width = 70mm]{frep_lidar.png}}\\
-  \subfloat[Online resulting force]{\includegraphics[width = 70mm]{fnav_lidar.png}}\\
+  \subfloat[Online attractive force applied to the robot]{\includegraphics[width = 70mm]{images/fattr_lidar.png}}\\
+  \subfloat[Online repulsive force applied to the robot]{\includegraphics[width = 70mm]{images/frep_lidar.png}}\\
+  \subfloat[Online resulting force]{\includegraphics[width = 70mm]{images/fnav_lidar.png}}\\
   \captionsetup{font=footnotesize}
   \caption{Attractive and repulsive fields, and trajectory that the real robot
     follows using online data coming from the Lidar mounted on top of it} \label{f:kbki_lidar}
