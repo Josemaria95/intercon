@@ -27,6 +27,11 @@
 % Oscar E. Ramos\IEEEauthorrefmark{1}}
 % \IEEEauthorblockA{\IEEEauthorrefmark{1}Department of Electrical Engineering, Universidad de Ingenieria y Tecnologia - UTEC, Lima, Peru.}
 % }
+
+\IEEEoverridecommandlockouts
+\IEEEpubid{\makebox[\columnwidth]{978-1-5386-5491-0/18/\$31.00 \copyright2018
+    IEEE \hfill} \hspace{\columnsep}\makebox[\columnwidth]{ }}
+
 \maketitle
 \begin{abstract}
   Autonomous motion of mobile robots is an open problem in robotics. Challenges
@@ -42,7 +47,7 @@
   information from the environment. The generated path is then followed by an
   iterative closed-loop feedback controller based on polar coordinates which is
   guided by the potential field. With this framework the robot can autonomously
-  move autonomously to a desired goal avoiding obstacles online. The framework
+  move to a desired goal avoiding obstacles online. The framework
   continuously plans its trajectory, being able to avoid obstacles
   online. Results were obtained using a dynamic simulator and a
   differential-drive mobile robot that uses an onboard Lidar.
@@ -108,7 +113,7 @@ using a Raspberri Pi3 computer, which allowed the robot to achieve autonomy.
 \begin{figure}%[h]
   \centering \footnotesize
   \subfloat
-  {\includegraphics[width=0.4\textwidth]{images/kobuki}}
+  {\includegraphics[width=0.4\textwidth]{images/kobuki}} %
   \captionsetup{font=footnotesize}
   \caption{Experimental setup for testing the autonomy of the mobile robot. A
     goal position is given behind the obstacles so that the robot cannot follow
@@ -505,9 +510,9 @@ shown.
 \begin{figure}
   \centering
   % \subfloat [Kobuki with lidar in workspace]{\includegraphics[width = 70mm]{kobuki_201.jpg}}\\
-  \subfloat[Online attractive force applied to the robot]{\includegraphics[width = 70mm]{images/fattr_lidar.png}}\\
-  \subfloat[Online repulsive force applied to the robot]{\includegraphics[width = 70mm]{images/frep_lidar.png}}\\
-  \subfloat[Online resulting force]{\includegraphics[width = 70mm]{images/fnav_lidar.png}}\\
+  \subfloat[Online attractive force applied to the robot]{\includegraphics[width = 67mm]{images/fattr_lidar.png}}\\
+  \subfloat[Online repulsive force applied to the robot]{\includegraphics[width = 67mm]{images/frep_lidar.png}}\\
+  \subfloat[Online resulting force]{\includegraphics[width = 67mm]{images/fnav_lidar.png}}\\
   \captionsetup{font=footnotesize}
   \caption{Attractive and repulsive fields, and trajectory that the real robot
     follows using online data coming from the Lidar mounted on top of it} \label{f:kbki_lidar}
@@ -516,16 +521,19 @@ shown.
 \section{Conclusion}
 \label{sec:conclusion}
 We presented a whole framework for autonomous motion based on Artificial
-Potential Fields and a closed-loop feedback controller. This was applied to
-navigation tasks of a differential drive robot. The motion controller is based
-on polar coordinates. Results for the motion controller proved to be a solution
-to the non-holonomic constraints that the robot presents. In the same way, the
-performance of the robot in simulation shows its rapid convergence through
-smooth trajectories. Tests on a real Kobuki differential-drive robot show
-successful results. They also demonstrate the robot's capability of autonomous
-motion despite the unknown configuration of the environment. The lidar provided
-information of the environment so that the robot can decide its motion towards
+Potential Fields and a closed-loop feedback controller based on polar
+coordinates. This was applied to navigation tasks of a differential drive robot
+with a lidar that provided information of the environment. Results of the
+approach in simulation show its rapid convergence through smooth trajectories,
+and results on a real Kobuki differential-drive robot verify this control
+smoothness. They also demonstrate the robot's capability of autonomous motion
+despite the unknown configuration of the environment leading to motion towards
 the goal avoiding obstacles in real time.
+
+Future work involves adapting the hardware to perform a 3D reconstruction of
+the environment based on the robot autonomy, as well as different tests with
+potential fields and other motion planning methods for exploration of unknown
+environments.
 
 %We presented a controller based on Artificial Potential Field and a closed-loop feedback controller for navigation tasks of a differential drive robot. The motion controller differs from other works because it bases its frame in polar coordinates. Results for the motion controller proved to be a solution to the non-holonomic constraints that the robot presents. In the same way, the performance of the robot in simulation shows its rapid convergence through smooth trajectories.
 % Tests on the Kobuki robot show successful results. It also demonstrates the robot's autonomy despite the unknown configuration of the environment, since only odometry is used. It is demonstrated that by placing the lidar on the Kobuki robot, it can decide its obstacles in real time and can evade them without any problem reaching the goal.
